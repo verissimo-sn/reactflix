@@ -1,23 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+import Tmdb from './services/api';
+
+import MovieRow from './components/MovieRow';
+
 import './App.css';
 
-import Tmdb from './server/api';
-
 function App() {
+  const [movieList, setMovieList] = useState([]);
 
   useEffect(()=>{
     const LoadData = async () => {
       let list = await Tmdb.getHomeList();
-      console.log(list);
+
+      setMovieList(list);
     }
 
     LoadData();
   }, []);
 
   return (
-    <>
-      <h1>ReactFlix</h1>
-    </>
+    <div className="index-page">
+      <section className="linsts">
+        {movieList.map((item, key) => (
+          <MovieRow key={key} title={item.title} items={item.items}/>
+
+        ))}
+      </section>
+    </div>
   );
 }
 
