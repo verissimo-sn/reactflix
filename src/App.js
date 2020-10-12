@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
   const [movieList, setMovieList] = useState([]);
-  const [featureData, setFeatureData] = useState(null);
+  const [featuredData, setFeaturedData] = useState(null);
 
   useEffect(()=>{
     const LoadData = async () => {
@@ -22,7 +22,7 @@ function App() {
       let chosen = featured[0].items.results[randomChosen];
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
 
-      setFeatureData(chosenInfo);
+      setFeaturedData(chosenInfo);
     }
 
     LoadData();
@@ -31,8 +31,8 @@ function App() {
   return (
     <div className="index-page">
 
-      {featureData && (
-        <FeaturedMovie item={featureData}/>
+      {featuredData && (
+        <FeaturedMovie item={featuredData}/>
       )}
 
       <section className="lists">

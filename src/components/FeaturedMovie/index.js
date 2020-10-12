@@ -11,9 +11,9 @@ const index = ({ item }) => {
 
   return (
     <section className="featured" style={{
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
     }}>
       <div className="featured--vertical">
         <div className="featured--horizontal">
@@ -24,8 +24,9 @@ const index = ({ item }) => {
             <div className="featured--seasons">{item.number_of_seasons} temporada{item.number_of_seasons > 1 ? 's' : ''}</div>
           </div>
           <div className="featured--description">{item.overview}</div>
-          <div className="featured-buttons">
-
+          <div className="featured--buttons">
+            <a className="featured--watch-button" href={`/watch/${item.id}`}>▶ Assistir</a>
+            <a className="featured--mylist-button" href={`/list/add/${item.id}`}>+ Minha Lista</a>
           </div>
           <div className="featured--genres"><strong>Gêneros: </strong>{movieGenres.join(', ')}</div>
         </div>
