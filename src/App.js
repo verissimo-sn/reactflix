@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Tmdb from './services/api';
 
+import NavBar from './components/NavBar';
 import FeaturedMovie from './components/FeaturedMovie';
 import MovieRow from './components/MovieRow';
 
@@ -10,6 +11,7 @@ import './App.css';
 function App() {
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [flutuante, setFlutuante] = useState(false)
 
   useEffect(()=>{
     const LoadData = async () => {
@@ -28,8 +30,25 @@ function App() {
     LoadData();
   }, []);
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if(window.scrollY > 20) {
+        setFlutuante(true);
+      }else {
+        setFlutuante(false);
+      }
+    }
+
+    window.addEventListener('scroll', scrollListener);
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
+
   return (
     <div className="index-page">
+      <NavBar flutuante={flutuante}/>
 
       {featuredData && (
         <FeaturedMovie item={featuredData}/>

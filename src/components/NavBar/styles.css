@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding: 0 30px;
+  background: transparent;
+  z-index: 999;
+  transition: all ease 0.5s;
+}
+
+.navbar.flutuante {
+  background: #141414;
+  box-shadow: 1px 2px 3px rgba(112, 112, 112, 0.3);
+}
+
+.navbar--logo {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+}
+
+.navbar--logo img {
+  height: 100%;
+}
+
+.navbar--logo-react {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.navbar--logo-netflix {
+  width: 100px;
+}
+
+.navbar--user {
+  height: 50px;
+}
+
+.navbar--user img {
+  height: 100%;
+  border-radius: 5px;
+}
