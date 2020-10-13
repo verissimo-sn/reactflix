@@ -5,6 +5,7 @@ import Tmdb from './services/api';
 import NavBar from './components/NavBar';
 import FeaturedMovie from './components/FeaturedMovie';
 import MovieRow from './components/MovieRow';
+import Footer from './components/Footer';
 
 import './App.css';
 
@@ -60,6 +61,8 @@ function App() {
 
         ))}
       </section>
+
+      <Footer />
     </div>
   );
 }
