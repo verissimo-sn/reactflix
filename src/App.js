@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import FeaturedMovie from './components/FeaturedMovie';
 import MovieRow from './components/MovieRow';
 import Footer from './components/Footer';
+import LoadingPage from './components/LoadingPage';
 
 import './App.css';
 
@@ -63,6 +64,8 @@ function App() {
       </section>
 
       <Footer />
+
+      <LoadingPage />
     </div>
   );
 }
