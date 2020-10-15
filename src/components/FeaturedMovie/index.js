@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-const index = ({ item }) => {
+const FeaturedMovie = ({ item }) => {
   const movieDate = new Date(item.first_air_date);
   let movieGenres = [];
 
@@ -35,4 +35,4 @@ const index = ({ item }) => {
   )
 }
 
-export default index;
+export default FeaturedMovie;

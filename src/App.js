@@ -65,7 +65,9 @@ function App() {
 
       <Footer />
 
-      <LoadingPage />
+      {movieList.length <= 0 && 
+        <LoadingPage />
+      }
     </div>
   );
 }
