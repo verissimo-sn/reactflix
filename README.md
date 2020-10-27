@@ -13,7 +13,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/languages/count/verissimo-sn/reactflix"/>
     &nbsp;&nbsp;&nbsp;
-    <img src="https://img.shields.io/github/stars/verissimo-sn/reactflix?style=social"/>
+    <img src="https://img.shields.io/github/watchers/verissimo-sn/reactflix?label=visitors&style=social"/>
 </p>
 
 <p align="center">
